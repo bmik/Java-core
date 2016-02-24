@@ -13,12 +13,12 @@ public class SimpleLambda {
 
         List<String> list = Arrays.asList("a", "e", "b");
 
-        /*list.forEach(s -> {
+        list.forEach(s -> {
             s = s.toUpperCase();
             System.out.println(s);
-        });*/
+        });
 
-        list.sort((o1, o2) -> o1.compareTo(o2));
+        list.sort(String::compareTo);
 
         System.out.println(Arrays.toString(list.toArray()));
 
